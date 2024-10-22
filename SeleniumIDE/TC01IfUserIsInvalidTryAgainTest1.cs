@@ -28,10 +28,7 @@ public class TC01IfUserIsInvalidTryAgainTest
         options.AddArguments("disable-gpu");
         options.AddArguments("window-size=1920x1080");
 
-        string driverPath = @"C:\Users\krist\desktop\2-seleniumide\drivers";
-
-        var service = ChromeDriverService.CreateDefaultService(driverPath);
-        driver = new ChromeDriver(service, options); // Initialize driver
+        driver = new ChromeDriver(options); // Initialize driver
 
         js = (IJavaScriptExecutor)driver;
         vars = new Dictionary<string, object>();
